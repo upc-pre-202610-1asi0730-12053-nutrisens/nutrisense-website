@@ -96,6 +96,112 @@
     </div>
   </header>
 
+  <!-- ============================================================
+       MAIN CONTENT
+       ============================================================ -->
+  <main id="main-content" class="page-content">
+
+    <!-- ============================================================
+         HERO CAROUSEL
+         ============================================================ -->
+    <section class="hero" aria-label="Hero carousel" aria-roledescription="carousel">
+
+      <div class="hero__track" role="list">
+
+        <!-- Slide 1 — Lose Weight CTA -->
+        <article class="hero__slide hero__slide--cta" role="listitem" aria-label="Slide 1 of 4: Weight Loss" aria-hidden="false">
+          <div class="hero__slide-bg" style="background-image: url('assets/images/hero-lose-weight.webp');"></div>
+          <div class="hero__slide-content">
+            <span class="hero__tag" data-i18n="hero1_tag">Weight Loss</span>
+            <h1 data-i18n="hero1_title">Smart Nutrition, Your Way</h1>
+            <p data-i18n="hero1_subtitle">The only platform that adapts your goals and recommendations to your location, your city's weather, and your lifestyle in real time.</p>
+            <a href="#"
+               class="btn btn-primary"
+               data-i18n="hero1_cta"
+               aria-label="Start losing weight">Start Losing Weight</a>
+          </div>
+        </article>
+
+        <!-- Slide 2 — Gain Muscle CTA -->
+        <article class="hero__slide hero__slide--cta" role="listitem" aria-label="Slide 2 of 4: Muscle Gain" aria-hidden="true">
+          <div class="hero__slide-bg" style="background-image: url('assets/images/hero-muscle.webp');"></div>
+          <div class="hero__slide-content">
+            <span class="hero__tag" data-i18n="hero2_tag">Muscle Gain</span>
+            <h1 data-i18n="hero2_title">Build Your Best Body</h1>
+            <p data-i18n="hero2_subtitle">Track your macros intelligently. Get contextual meal suggestions tailored to your muscle-gain goals — wherever you are, whatever the weather.</p>
+            <a href="#"
+               class="btn btn-primary"
+               data-i18n="hero2_cta"
+               aria-label="Start building muscle">Start Building Muscle</a>
+          </div>
+        </article>
+
+        <!-- Slide 3 — About the Product Video -->
+        <article class="hero__slide hero__slide--video" role="listitem" aria-label="Slide 3 of 4: About the Product video" aria-hidden="true">
+          <h2 data-i18n="hero3_title">About the Product</h2>
+          <p data-i18n="hero3_sub">Watch how NutriSense transforms your nutrition journey</p>
+          <div class="hero__video-wrapper">
+            <iframe
+              src="https://www.youtube.com/embed/VIDEO_ID_PRODUCT"
+              title="NutriSense: About the Product"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              loading="lazy"
+              aria-label="NutriSense product promotional video"></iframe>
+          </div>
+        </article>
+
+        <!-- Slide 4 — About the Team Video -->
+        <article class="hero__slide hero__slide--video" role="listitem" aria-label="Slide 4 of 4: About the Team video" aria-hidden="true">
+          <h2 data-i18n="hero4_title">Meet Our Team</h2>
+          <p data-i18n="hero4_sub">The people behind the platform that puts your health first</p>
+          <div class="hero__video-wrapper">
+            <iframe
+              src="https://www.youtube.com/embed/VIDEO_ID_TEAM"
+              title="NutriSense: About the Team"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              loading="lazy"
+              aria-label="NutriSense team introduction video"></iframe>
+          </div>
+        </article>
+
+      </div><!-- /.hero__track -->
+
+      <!-- Prev / Next buttons -->
+      <button class="hero__btn hero__btn--prev" aria-label="Previous slide">
+        <span class="material-icons" aria-hidden="true">chevron_left</span>
+      </button>
+      <button class="hero__btn hero__btn--next" aria-label="Next slide">
+        <span class="material-icons" aria-hidden="true">chevron_right</span>
+      </button>
+
+      <!-- Dot indicators -->
+      <div class="hero__dots" role="tablist" aria-label="Carousel slide indicators">
+        <button class="hero__dot is-active" role="tab" aria-label="Go to slide 1" aria-current="true"></button>
+        <button class="hero__dot" role="tab" aria-label="Go to slide 2"></button>
+        <button class="hero__dot" role="tab" aria-label="Go to slide 3"></button>
+        <button class="hero__dot" role="tab" aria-label="Go to slide 4"></button>
+      </div>
+
+    </section><!-- /.hero -->
+
+    <!-- ============================================================
+         SMART SCAN SECTION
+         ============================================================ -->
+    <section class="feat-section feat-section--text-left" aria-labelledby="ss-heading">
+      <div class="feat-section__content">
+        <div class="feat-section__text">
+          <h2 id="ss-heading" data-i18n="fh1_title">Smart Scan</h2>
+          <p data-i18n="fh1_desc">Take a photo of your plate or a restaurant menu and get instant nutritional estimates — automatically matched to your profile and goals.</p>
+        </div>
+        <div class="feat-section__img-wrap">
+          <img src="assets/images/feature-smart-scan.webp" alt="Smart Scan: food photo analysis" loading="lazy" />
+        </div>
+      </div>
+    </section>
+    </main>
+
   
   <script src="js/main.js"></script>
 </body>

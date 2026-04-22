@@ -591,3 +591,181 @@ h4 { font-size: clamp(18px, 2.5vw, var(--h4)); font-weight: 600; }
   height: 100%;
   border: none;
 }
+
+
+/* ============================================================
+   FULL-SCREEN FEATURE SECTIONS (index.html — Smart Scan, Global Nutrition, Weather)
+   ============================================================ */
+.feat-section {
+  min-height: 100vh;
+  background: var(--color-white);
+  display: flex;
+  align-items: center;
+}
+
+.feat-section__content {
+  max-width: 1800px;
+  margin: 0 auto;
+  padding: 80px 24px;
+  display: grid;
+  grid-template-columns: 1fr 800px;
+  gap: 60px;
+  align-items: center;
+  width: 100%;
+}
+
+.feat-section--img-left.feat-section__content {
+  grid-template-columns: 800px 1fr;
+}
+
+.feat-section--img-left .feat-section__img-wrap { order: -1; }
+
+.feat-section__text h2 {
+  color: var(--color-black);
+  margin-bottom: 20px;
+  font-size: clamp(28px, 4vw, 44px);
+}
+
+.feat-section__text p {
+  color: var(--color-text);
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+.feat-section__img-wrap img {
+  width: 800px;
+  height: 800px;
+  max-width: 100%;
+  object-fit: cover;
+  display: block;
+  border: none;
+  border-radius: 0;
+}
+
+
+/* ============================================================
+   SEGMENTS SECTION
+   ============================================================ */
+.segments {
+  min-height: 100vh;
+  padding: 100px 0;
+  background: var(--color-bg-light);
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+
+.segments .container { width: 100%; }
+
+.segments h2 {
+  color: var(--color-text);
+  margin-bottom: 12px;
+}
+
+.segments__subtitle {
+  color: var(--color-text-muted);
+  margin-bottom: 56px;
+  font-size: 17px;
+}
+
+.segments__cards {
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+.segment-card {
+  background: linear-gradient(to bottom, #FFC0CB, #F4C5AE);
+  border: none;
+  border-radius: var(--radius-xl);
+  padding: 56px 48px;
+  max-width: 380px;
+  width: 100%;
+  text-align: center;
+  transition: box-shadow var(--transition), transform var(--transition);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.segment-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-4px);
+}
+
+.segment-card__icon {
+  width: 110px;
+  height: 110px;
+  background: #FFE9DE;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.segment-card__icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.segment-card h3 { color: var(--color-text); font-size: var(--h4); }
+.segment-card p { color: var(--color-text-muted); font-size: 14px; line-height: 1.6; }
+.segment-card .btn {
+  background: #FFE9DE;
+  color: var(--color-text);
+  box-shadow: var(--shadow-sm);
+}
+.segment-card .btn:hover { background: #f0c8b5; box-shadow: var(--shadow-md); }
+
+
+/* ============================================================
+   FEATURES GRID (index.html — 3x3 teal container)
+   ============================================================ */
+.features-grid {
+  padding: 100px 0;
+  background: var(--color-white);
+}
+
+.features-grid h2 { margin-bottom: 40px; }
+
+.features-teal-wrap {
+  background: var(--color-primary);
+  border-radius: var(--radius-xl);
+  padding: 36px;
+}
+
+.features-teal-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.feat-card {
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  padding: 32px 16px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+.feat-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+
+.feat-card .material-icons {
+  font-size: 52px;
+  color: var(--color-black);
+}
+
+.feat-card h3 {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--color-black);
+  font-family: var(--font-heading);
+  line-height: 1.3;
+}

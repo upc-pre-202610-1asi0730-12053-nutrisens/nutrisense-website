@@ -1,3 +1,133 @@
 /* --- Google Fonts --- */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Questrial&display=swap');
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+/* --- CSS Variables --- */
+:root {
+  --color-primary:    #508B89;
+  --color-primary-dk: #3a6a68;
+  --color-bg-light:   #FFE9DE;
+  --color-cta:        #F4C5AE;
+  --color-cta-dk:     #e0a98e;
+  --color-black:      #000000;
+  --color-white:      #FFFFFF;
+  --color-text:       #1a1a1a;
+  --color-text-muted: #5c5c5c;
+  --color-border:     #e0d6d0;
+
+  --font-heading: 'Poppins', sans-serif;
+  --font-body:    'Questrial', sans-serif;
+
+  --h1: 48px;
+  --h2: 36px;
+  --h3: 28px;
+  --h4: 24px;
+  --body: 16px;
+  --caption: 13px;
+
+  --shadow-sm: 0 1px 4px rgba(0,0,0,.08);
+  --shadow-md: 0 4px 16px rgba(0,0,0,.12);
+  --shadow-lg: 0 8px 32px rgba(0,0,0,.18);
+  --radius:    8px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --transition: .3s ease;
+  --nav-height: 68px;
+}
+
+/* --- Reset & Base --- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+html.snap-page {
+  scroll-snap-type: y mandatory;
+  scroll-padding-top: var(--nav-height);
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--body);
+  color: var(--color-text);
+  background: var(--color-white);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+img { max-width: 100%; height: auto; display: block; }
+
+a { color: inherit; text-decoration: none; }
+
+ul { list-style: none; }
+
+button { cursor: pointer; border: none; background: none; font-family: inherit; }
+
+/* --- Typography --- */
+h1, h2, h3, h4, h5, h6 { font-family: var(--font-heading); line-height: 1.2; }
+
+h1 { font-size: clamp(32px, 5vw, var(--h1)); font-weight: 700; }
+h2 { font-size: clamp(26px, 4vw, var(--h2)); font-weight: 700; }
+h3 { font-size: clamp(22px, 3vw, var(--h3)); font-weight: 600; }
+h4 { font-size: clamp(18px, 2.5vw, var(--h4)); font-weight: 600; }
+
+/* --- Utility classes --- */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 48px;
+  font-family: var(--font-heading);
+  font-weight: 700;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 32px;
+  border-radius: var(--radius);
+  font-family: var(--font-heading);
+  font-size: 15px;
+  font-weight: 600;
+  transition: background var(--transition), box-shadow var(--transition), transform var(--transition);
+  white-space: nowrap;
+}
+
+.btn:hover { transform: translateY(-2px); }
+.btn:active { transform: translateY(0); }
+
+.btn-primary {
+  background: var(--color-cta);
+  color: var(--color-text);
+  box-shadow: var(--shadow-sm);
+}
+.btn-primary:hover { background: var(--color-cta-dk); box-shadow: var(--shadow-md); }
+
+.btn-primary-teal {
+  background: var(--color-primary);
+  color: var(--color-white);
+  box-shadow: var(--shadow-sm);
+}
+.btn-primary-teal:hover { background: var(--color-primary-dk); box-shadow: var(--shadow-md); }
+
+.btn-outline {
+  background: transparent;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+}
+.btn-outline:hover { background: var(--color-primary); color: var(--color-white); }
+
+.btn-white {
+  background: var(--color-white);
+  color: var(--color-primary);
+  box-shadow: var(--shadow-sm);
+}
+.btn-white:hover { box-shadow: var(--shadow-md); }

@@ -189,3 +189,178 @@ const translations = {
     footer_terms:    'Terms and Conditions',
     footer_copy:     '© 2026 NutriSense. Designed by the NutriSense Team',
   },
+
+  /** @type {TranslationMap} Spanish Latin-American (es_419) strings. */
+  es: {
+    /* --- NAV --- */
+    nav_about:    'Nosotros',
+    nav_features: 'Funcionalidades',
+    nav_contact:  'Contacto',
+    nav_links:    'Enlances',
+    nav_login:    'Iniciar sesión',
+    nav_lang_label: 'Idioma',
+
+    /* --- HERO CAROUSEL --- */
+    hero1_tag:      'Pérdida de peso',
+    hero1_title:    'Nutrición inteligente,\na tu manera',
+    hero1_subtitle: 'La única plataforma que adapta sus recomendaciones a tu ubicación, el clima del día y tu perfil de salud para que puedas perder peso sin dietas estrictas.',
+    hero1_cta:      'Comenzar a adelgazar',
+
+    hero2_tag:      'Ganancia de masa',
+    hero2_title:    'Construye tu\nmejor cuerpo',
+    hero2_subtitle: 'Registra tus macros de manera inteligente. Recibe sugerencias de comidas según tu contexto real, adaptadas a tus metas de ganancia muscular.',
+    hero2_cta:      'Comenzar a ganar músculo',
+
+    hero3_title:   'Sobre el producto',
+    hero3_sub:     'Mira cómo NutriSense transforma tu experiencia nutricional',
+
+    hero4_title:   'Conoce nuestro equipo',
+    hero4_sub:     'Las personas detrás de la plataforma que pone tu salud primero',
+
+    /* --- FEATURE HIGHLIGHTS --- */
+    fh_title:    'Lo que nos hace diferentes',
+    fh_subtitle: 'NutriSense va más allá de contar calorías. El contexto lo es todo.',
+
+    fh1_title: 'Smart Scan',
+    fh1_desc:  'Toma una foto de tu plato o del menú de un restaurante y obtén estimaciones nutricionales al instante, adaptadas automáticamente a tu perfil y metas.',
+
+    fh2_title: 'Nutrición Global',
+    fh2_desc:  'Descubre platos locales saludables donde estés. Nuestra plataforma sugiere opciones basadas en la cultura gastronómica de tu ciudad o país actual.',
+
+    fh3_title: 'Consejos por clima',
+    fh3_desc:  '¿Día caluroso? ¿Noche fría? NutriSense ajusta tus recomendaciones de comidas en tiempo real según el clima de tu ubicación.',
+
+    /* --- WEATHER SECTION --- */
+    weather_title:    'Tu clima, tu dieta',
+    weather_subtitle: 'El primer asistente de nutrición inteligente del mundo que considera tu clima. Los días calurosos exigen comidas ligeras e hidratantes; los fríos, opciones reconfortantes y calóricas.',
+    weather_cta:      'Ver cómo funciona',
+
+    /* --- SEGMENTS --- */
+    seg_title:    'Únete y transforma tu vida',
+    seg_subtitle: 'Elige el objetivo que mejor te describa y comienza hoy.',
+
+    seg1_title: 'Quiero ganar\nmasa muscular',
+    seg1_desc:  'Seguimiento optimizado de macros, objetivos de proteínas y sugerencias contextuales para atletas y entusiastas del fitness.',
+    seg1_cta:   'Comenzar',
+
+    seg2_title: 'Quiero\nadelgazar',
+    seg2_desc:  'Control de calorías sin esfuerzo, intercambios de comidas inteligentes y recomendaciones que se adaptan a tu vida real, sin dietas estrictas.',
+    seg2_cta:   'Comenzar',
+
+    /* --- PLANS --- */
+    plans_title:    'Elige tu plan',
+    plans_subtitle: 'Empieza con el plan que se adapte a tus metas. Puedes mejorar en cualquier momento.',
+
+    plan_basic:   'Básico',
+    plan_pro:     'Pro',
+    plan_premium: 'Premium',
+    plan_popular:      'Más popular',
+    plan_recommended:  'Recomendado',
+    plan_month:   '/ mes',
+    plan_cta:     'Suscríbete ya',
+
+    plan_basic_desc:   'Herramientas esenciales para comenzar a registrar tu nutrición hoy.',
+    plan_pro_desc:     'Funciones contextuales para quienes van en serio con sus metas.',
+    plan_premium_desc: 'Todo lo que necesitas, sin límites, para los más comprometidos.',
+
+    pf_nutrition_log:   'Registro nutricional',
+    pf_basic_dashboard: 'Panel básico',
+    pf_body_metrics:    'IMC / TMB / TDEE',
+    pf_smart_scan:      'Smart Scan (análisis de fotos)',
+    pf_travel_mode:     'Modo viaje',
+    pf_weather_recs:    'Recomendaciones por clima',
+    pf_pantry:          'Despensa y sugerencias de recetas',
+    pf_wearable:        'Sincronización de wearable (Google Fit)',
+    pf_menu_analysis:   'Análisis de menú de restaurante',
+    pf_unlimited_hist:  'Historial ilimitado',
+    pf_pdf_reports:     'Reportes en PDF',
+
+    /* --- FEATURES GRID --- */
+    feat_title:    'Funcionalidades para disfrutar',
+    feat_subtitle: 'Un conjunto completo de herramientas para una vida más saludable.',
+    feat_see_all:  'Ver todas las funcionalidades',
+
+    feat1_title: 'Smart Scan',
+    feat1_desc:  'Analiza comidas y menús mediante fotos',
+    feat2_title: 'Consejos de clima',
+    feat2_desc:  'Sugerencias de comidas según el clima local',
+    feat3_title: 'Modo viaje',
+    feat3_desc:  'Platos locales saludables en cualquier parte',
+    feat4_title: 'Ideas de recetas',
+    feat4_desc:  'Recetas con ingredientes de tu despensa',
+    feat5_title: 'Sincronización',
+    feat5_desc:  'Sincroniza tu actividad con Google Fit',
+    feat6_title: 'Registro de comidas',
+    feat6_desc:  'Registra desayuno, almuerzo, cena y meriendas',
+
+    /* --- FAQ --- */
+    faq_title: 'Preguntas frecuentes',
+
+    faq1_q: '¿Qué hace diferente a NutriSense de otras aplicaciones de nutrición?',
+    faq1_a: 'NutriSense es la única plataforma que combina análisis visual de alimentos (Smart Scan), recomendaciones por clima en tiempo real, modo viaje con sugerencias de platos locales e ideas de recetas basadas en tu despensa, todo adaptado a tu perfil de salud y restricciones dietéticas.',
+
+    faq2_q: '¿Cómo funciona el análisis de fotos "Smart Scan"?',
+    faq2_a: 'Simplemente toma una foto de tu plato o del menú de un restaurante. NutriSense usa visión por computadora para identificar los alimentos y cruza los datos con nuestra base nutricional para estimar calorías y macros. Tú revisas y confirmas el resultado antes de guardarlo en tu registro.',
+
+    faq3_q: '¿La app me ayuda si viajo o si el clima cambia?',
+    faq3_a: 'Sí. El Modo viaje detecta o te permite ingresar tu ciudad o país actual y sugiere platos locales saludables compatibles con tu perfil. El motor de clima actualiza las recomendaciones diariamente según las condiciones en tiempo real de tu ubicación.',
+
+    faq4_q: '¿Puedo usar NutriSense si tengo alergias o restricciones médicas?',
+    faq4_a: 'Por supuesto. Durante la configuración del perfil puedes especificar alergias, intolerancias y condiciones médicas (diabetes, hipertensión, celiaquía, etc.). Estos filtros se aplican de forma permanente a cada recomendación y resultado de búsqueda en toda la aplicación.',
+
+    faq5_q: '¿Puedo sincronizar mis datos de ejercicio con la plataforma?',
+    faq5_a: 'Los suscriptores Premium pueden conectar Google Fit para importar automáticamente los pasos diarios y las calorías activas quemadas. Estas calorías se incluyen en tu balance diario en tiempo real. Los usuarios sin wearable también pueden registrar actividad manualmente.',
+
+    /* --- ABOUT US --- */
+    about_hero_title: 'Somos NutriSense',
+    about_hero_desc:  'Comer bien no debería ser un reto. En NutriSense transformamos la gestión alimentaria combinando el seguimiento nutricional con el análisis inteligente del contexto. No solo contamos calorías: entendemos tu entorno para que puedas alcanzar tus metas, sin importar dónde estés ni qué tiempo haga hoy.',
+
+    mission_title: 'Misión',
+    mission_desc:  'Empoderar a las personas para comer mejor a través del análisis visual de alimentos y recomendaciones inteligentes adaptadas a su entorno y hábitos.',
+
+    vision_title: 'Visión',
+    vision_desc:  'Ser la plataforma líder de nutrición personalizada en Latinoamérica, transformando la salud del usuario sin importar su ubicación.',
+
+    /* --- FEATURES PAGE --- */
+    more_feat_title: 'Más funcionalidades para disfrutar',
+    more_feat_sub:   'Todo lo que necesitas para comer con más inteligencia y vivir mejor.',
+
+    mf1_title: 'Smart Scan',           mf1_desc: 'Escanea tu comida con una foto y obtén calorías y nutrientes al instante.',
+    mf2_title: 'Consejos de clima',    mf2_desc: 'Recibe sugerencias de comidas según el clima local en tiempo real.',
+    mf3_title: 'Modo viaje',           mf3_desc: 'Encuentra los platos locales más saludables donde vayas en el mundo.',
+    mf4_title: 'Ideas de recetas',     mf4_desc: 'Obtén ideas de recetas nutritivas con los ingredientes de tu despensa.',
+    mf5_title: 'Sincronización',       mf5_desc: 'Sincroniza automáticamente tu actividad física desde Google Fit.',
+    mf6_title: 'Análisis de menú',     mf6_desc: 'Encuentra la opción más saludable en cualquier menú de restaurante según tu perfil.',
+    mf7_title: 'Registro de comidas',  mf7_desc: 'Registra fácilmente desayuno, almuerzo, cena y meriendas del día.',
+    mf8_title: 'Historial ilimitado',  mf8_desc: 'Accede a tu progreso completo y registros pasados sin límite de tiempo.',
+    mf9_title: 'Reportes en PDF',      mf9_desc: 'Descarga resúmenes nutricionales detallados en PDF cuando quieras.',
+    mf10_title:'Métricas de salud',    mf10_desc:'Obtén tu IMC, TMB y TDEE calculados automáticamente.',
+
+    /* --- CONTACT --- */
+    contact_hero_title: 'Contáctanos',
+    contact_phone:      '+51 984 231 995',
+    contact_form_title: 'Escríbenos',
+    contact_name:       'Nombre',
+    contact_email:      'Correo electrónico',
+    contact_phone_lbl:  'Teléfono',
+    contact_message:    'Mensaje',
+    contact_submit:     'Enviar',
+    contact_success:    '¡Gracias! Tu mensaje ha sido enviado. Te responderemos en menos de 24 horas.',
+    contact_err_name:   'Por favor ingresa tu nombre completo (nombre y apellido, mínimo 2 caracteres cada uno).',
+    contact_err_email:  'Por favor ingresa un correo electrónico válido (ej. nombre@dominio.com).',
+    contact_err_phone:  'Por favor ingresa un número telefónico internacional válido (ej. +51 984 231 995).',
+    contact_err_msg:    'El mensaje debe tener al menos 20 caracteres.',
+
+    /* --- TERMS --- */
+    terms_title:   'Términos y condiciones',
+    terms_updated: 'Última actualización: 10 de abril de 2026',
+
+    /* --- FOOTER --- */
+    footer_tagline:  'Nutrición más inteligente para la vida real.',
+    footer_nav_head: 'Navegar',
+    footer_social:   'Redes sociales',
+    footer_lang:     'Idioma',
+    footer_terms:    'Términos y condiciones',
+    footer_copy:     '© 2026 NutriSense. Diseñado por el equipo NutriSense',
+  }
+};

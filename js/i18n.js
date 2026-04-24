@@ -364,3 +364,117 @@ const translations = {
     footer_copy:     '© 2026 NutriSense. Diseñado por el equipo NutriSense',
   }
 };
+
+/* ============================================================
+   i18n Engine
+   ============================================================ */
+
+/**
+ * @namespace I18n
+ * @description Singleton module that manages language selection, string lookup,
+ * DOM translation, and language-selector synchronisation.
+ * The active language is stored in localStorage under the key `nutrisense_lang`.
+ */
+const I18n = (() => {
+  /** @type {string} localStorage key used to persist the selected language. */
+  const STORAGE_KEY = 'nutrisense_lang';
+
+  /** @type {string} Currently active language code ('en' or 'es'). */
+  let currentLang = 'en';
+
+  /**
+   * Reads the persisted language preference from localStorage.
+   * Falls back to `'en'` if no preference has been saved.
+   * @returns {string} Language code ('en' or 'es').
+   */
+  function getLang() {
+    return localStorage.getItem(STORAGE_KEY) || 'en';
+  }
+
+  /**
+   * Switches the active language, persists the choice, re-applies all
+   * translations to the DOM, and updates the `lang` attribute on `<html>`.
+   * @param {string} lang - Language code to activate ('en' or 'es').
+   * @returns {void}
+   */
+  function setLang(lang) {
+    if (!translations[lang]) return;
+    currentLang = lang;
+    localStorage.setItem(STORAGE_KEY, lang);
+    applyTranslations();
+    updateLangSelects();
+    document.documentElement.lang = lang === 'es' ? 'es-419' : 'en-US';
+  }
+
+  /**
+   * Looks up a translation string for the current language.
+   * Falls back to the English string, then to the raw key if neither exists.
+   * @param {string} key - Translation key to look up.
+   * @returns {string} Localised string, English fallback, or the key itself.
+   */
+  function t(key) {
+    return (translations[currentLang] && translations[currentLang][key]) ||
+           (translations['en'] && translations['en'][key]) ||
+           key;
+  }
+
+  /**
+   * Walks the DOM and applies translations to all annotated elements:
+   * - `[data-i18n]`             — sets `textContent` (or `placeholder` for inputs/textareas).
+   * - `[data-i18n-placeholder]` — sets the `placeholder` attribute.
+   * - `[data-i18n-aria]`        — sets the `aria-label` attribute.
+   * @returns {void}
+   */
+  function applyTranslations() {
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.getAttribute('data-i18n');
+      const val = t(key);
+      if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+        el.placeholder = val;
+      } else if (el.hasAttribute('data-i18n-html')) {
+        el.innerHTML = val;
+      } else {
+        el.textContent = val;
+      }
+    });
+
+    document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+      el.placeholder = t(el.getAttribute('data-i18n-placeholder'));
+    });
+
+    document.querySelectorAll('[data-i18n-aria]').forEach(el => {
+      const key = el.getAttribute('data-i18n-aria');
+      el.setAttribute('aria-label', t(key));
+    });
+  }
+
+  /**
+   * Synchronises all `.lang-select` `<select>` elements in the page
+   * to reflect the currently active language.
+   * @returns {void}
+   */
+  function updateLangSelects() {
+    document.querySelectorAll('.lang-select').forEach(sel => {
+      sel.value = currentLang;
+    });
+  }
+
+  /**
+   * Bootstraps the i18n module.
+   * Restores the persisted language, applies translations, and attaches
+   * `change` listeners to every `.lang-select` element on the page.
+   * @returns {void}
+   */
+  function init() {
+    currentLang = getLang();
+    applyTranslations();
+    updateLangSelects();
+    document.documentElement.lang = currentLang === 'es' ? 'es-419' : 'en-US';
+
+    document.querySelectorAll('.lang-select').forEach(sel => {
+      sel.addEventListener('change', e => setLang(e.target.value));
+    });
+  }
+
+  return { init, setLang, t, getLang };
+})();

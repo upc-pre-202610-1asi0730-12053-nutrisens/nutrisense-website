@@ -1135,5 +1135,6 @@ h4 { font-size: clamp(18px, 2.5vw, var(--h4)); font-weight: 600; }
 @media (max-width: 1024px) {
   .plans__grid { grid-template-columns: 1fr; max-width: 440px; margin: 0 auto; }
   .page-features .features-grid__items { grid-template-columns: repeat(2, 1fr); }
+  .about-description .container { grid-template-columns: 1fr; }
 }
 

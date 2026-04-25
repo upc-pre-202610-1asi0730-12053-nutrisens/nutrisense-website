@@ -166,6 +166,35 @@ function initCarousel() {
   });
 }
 
+/* ============================================================
+   FAQ ACCORDION
+   ============================================================ */
+
+/**
+ * Initialises the FAQ accordion.
+ * Clicking a question expands its answer and collapses any previously open item.
+ * @returns {void}
+ */
+function initFAQ() {
+  const faqItems = document.querySelectorAll('.faq-item');
+  faqItems.forEach(item => {
+    const btn    = item.querySelector('.faq-item__question');
+    const answer = item.querySelector('.faq-item__answer');
+    if (!btn || !answer) return;
+    btn.addEventListener('click', () => {
+      const isOpen = item.classList.contains('is-open');
+      faqItems.forEach(i => {
+        i.classList.remove('is-open');
+        i.querySelector('.faq-item__question')?.setAttribute('aria-expanded', 'false');
+      });
+      if (!isOpen) {
+        item.classList.add('is-open');
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+}
+
 /**
  * @section Terms Page — Language Block Sync
  * @description Toggles `lang-en` / `lang-es` CSS classes on `<body>` to show

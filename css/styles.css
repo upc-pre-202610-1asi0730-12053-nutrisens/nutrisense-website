@@ -1150,6 +1150,112 @@ h4 { font-size: clamp(18px, 2.5vw, var(--h4)); font-weight: 600; }
   opacity: .55;
 }
 
+/* ============================================================
+   TERMS PAGE
+   ============================================================ */
+.terms-page-outer {
+  background: var(--color-bg-light);
+  padding: 60px 0 80px;
+  min-height: calc(100vh - var(--nav-height));
+}
+
+.terms-page-title {
+  text-align: center;
+  color: var(--color-text);
+  margin-bottom: 12px;
+  font-family: var(--font-heading);
+  font-weight: 700;
+}
+
+.terms-page-date {
+  text-align: center;
+  color: var(--color-text-muted);
+  font-size: 14px;
+  margin-bottom: 40px;
+}
+
+.terms-white-box {
+  background: var(--color-white);
+  border-radius: var(--radius-xl);
+  padding: 48px;
+  max-width: 860px;
+  margin: 0 auto;
+  box-shadow: var(--shadow-md);
+}
+
+.terms-section {
+  padding: 24px 0;
+  margin-bottom: 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.terms-section:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.terms-section h2 {
+  font-size: var(--h4);
+  color: var(--color-primary);
+  margin-bottom: 16px;
+}
+
+.terms-section p { margin-bottom: 14px; font-size: 15px; line-height: 1.8; color: var(--color-text-muted); }
+.terms-section p:last-child { margin-bottom: 0; }
+
+.terms-section ul {
+  list-style: disc;
+  padding-left: 24px;
+  margin: 12px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.terms-section ul li {
+  font-size: 15px;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+.terms-section strong { color: var(--color-text); font-weight: 600; }
+
+/* Terms language switcher */
+.terms-lang-bar {
+  background: var(--color-white);
+  border-bottom: 1px solid var(--color-border);
+  padding: 10px 0;
+}
+.terms-lang-bar .container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+}
+.terms-lang-bar label {
+  font-size: var(--caption);
+  color: var(--color-text-muted);
+  font-family: var(--font-heading);
+  font-weight: 500;
+}
+.terms-lang-bar select {
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  padding: 4px 10px;
+  font-family: var(--font-body);
+  font-size: var(--caption);
+  background: var(--color-white);
+  color: var(--color-text);
+  cursor: pointer;
+}
+
+.terms-en,
+.terms-es { display: none; }
+.lang-en .terms-en { display: block; }
+.lang-es .terms-es  { display: block; }
+
+.terms-section a { color: var(--color-primary); text-decoration: underline; }
+
 .contact-hero .container {
   position: relative;
   z-index: 1;

@@ -1,6 +1,5 @@
 /**
  * @fileoverview NutriSense main script.
- * Bootstraps all interactive modules: navigation, hero carousel, FAQ accordion, and contact form.
  */
 'use strict';
 
@@ -166,6 +165,37 @@ function initCarousel() {
     if (e.key === 'ArrowRight') { goTo(current + 1); resetAuto(); }
   });
 }
+
+/**
+ * @section Terms Page — Language Block Sync
+ * @description Toggles `lang-en` / `lang-es` CSS classes on `<body>` to show
+ * or hide the corresponding `.terms-en` / `.terms-es` content blocks.
+ * Runs only on pages that contain a `.terms-en` element.
+ * Depends on {@link I18n} being initialised before this script executes.
+ */
+if (document.querySelector('.terms-en')) {
+
+  /**
+   * Applies the active language to the `<body>` class list so that CSS can
+   * show the correct terms content block and hide the other.
+   * @param {string} lang - Language code to activate ('en' or 'es').
+   * @returns {void}
+   */
+  function syncTermsLang(lang) {
+    document.body.classList.toggle('lang-en', lang === 'en');
+    document.body.classList.toggle('lang-es', lang === 'es');
+  }
+
+  // Apply on load using the persisted language preference.
+  syncTermsLang(I18n.getLang() || 'en');
+
+  // React to every lang-select change on the page.
+  document.querySelectorAll('.lang-select').forEach(sel => {
+    sel.addEventListener('change', e => syncTermsLang(e.target.value));
+  });
+
+}
+
 /* ============================================================
    CONTACT FORM
    ============================================================ */

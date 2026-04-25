@@ -1,5 +1,6 @@
 /**
  * @fileoverview NutriSense main script.
+ * Bootstraps all interactive modules: navigation, hero carousel, FAQ accordion, and contact form.
  */
 'use strict';
 
@@ -166,40 +167,48 @@ function initCarousel() {
   });
 }
 
+/* ============================================================
+   FAQ ACCORDION
+   ============================================================ */
+
 /**
- * @section Terms Page — Language Block Sync
- * @description Toggles `lang-en` / `lang-es` CSS classes on `<body>` to show
- * or hide the corresponding `.terms-en` / `.terms-es` content blocks.
- * Runs only on pages that contain a `.terms-en` element.
- * Depends on {@link I18n} being initialised before this script executes.
+ * Initialises the FAQ accordion.
+ * Only one answer panel can be open at a time; clicking an open item closes it.
+ * @returns {void}
  */
-if (document.querySelector('.terms-en')) {
+function initFAQ() {
+  const faqItems = document.querySelectorAll('.faq-item');
 
-  /**
-   * Applies the active language to the `<body>` class list so that CSS can
-   * show the correct terms content block and hide the other.
-   * @param {string} lang - Language code to activate ('en' or 'es').
-   * @returns {void}
-   */
-  function syncTermsLang(lang) {
-    document.body.classList.toggle('lang-en', lang === 'en');
-    document.body.classList.toggle('lang-es', lang === 'es');
-  }
+  faqItems.forEach(item => {
+    const btn    = item.querySelector('.faq-item__question');
+    const answer = item.querySelector('.faq-item__answer');
+    if (!btn || !answer) return;
 
-  // Apply on load using the persisted language preference.
-  syncTermsLang(I18n.getLang() || 'en');
+    btn.addEventListener('click', () => {
+      const isOpen = item.classList.contains('is-open');
 
-  // React to every lang-select change on the page.
-  document.querySelectorAll('.lang-select').forEach(sel => {
-    sel.addEventListener('change', e => syncTermsLang(e.target.value));
+      faqItems.forEach(i => {
+        i.classList.remove('is-open');
+        i.querySelector('.faq-item__question')?.setAttribute('aria-expanded', 'false');
+      });
+
+      if (!isOpen) {
+        item.classList.add('is-open');
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    });
   });
-
 }
 
 /* ============================================================
    CONTACT FORM
    ============================================================ */
 
+/**
+ * Initialises the contact form with real-time inline validation and submission handling.
+ * On successful validation the form is reset and a success message is shown for 6 seconds.
+ * @returns {void}
+ */
 function initContactForm() {
   const form = document.getElementById('contactForm');
   if (!form) return;
@@ -210,6 +219,14 @@ function initContactForm() {
   const messageInput = form.querySelector('#contact-message');
   const successBox   = document.getElementById('formSuccess');
 
+  /**
+   * Shows or hides an inline error message for a form field.
+   * Also toggles the `is-error` CSS class and ARIA invalid state on the input.
+   * @param {HTMLElement} input - The form input element to validate.
+   * @param {string}      errId - The `id` of the error message element.
+   * @param {boolean}     show  - `true` to display the error, `false` to hide it.
+   * @returns {void}
+   */
   function showError(input, errId, show) {
     const errEl = document.getElementById(errId);
     if (!errEl) return;
@@ -226,6 +243,12 @@ function initContactForm() {
     }
   }
 
+  /**
+   * Validates a full name: must contain at least two words,
+   * each with at least two characters, and no digits.
+   * @param {string} val - Raw input value.
+   * @returns {boolean} `true` if the name is valid.
+   */
   function isValidName(val) {
     const trimmed = val.trim();
     if (/\d/.test(trimmed)) return false;
@@ -233,16 +256,32 @@ function initContactForm() {
     return parts.length >= 2 && parts.every(p => p.length >= 2);
   }
 
+  /**
+   * Validates an email address using a basic RFC-compliant pattern.
+   * @param {string} val - Raw input value.
+   * @returns {boolean} `true` if the email format is valid.
+   */
   function isValidEmail(val) {
     return /^[^\s@]+@[^\s@]+\.[a-zA-Z]{2,}$/.test(val.trim());
   }
 
+  /**
+   * Validateñs an international phone number.
+   * The field is optional: an empty value is considered valid.
+   * @param {string} val - Raw input value.
+   * @returns {boolean} `true` if the phone is empty or matches the expected pattern.
+   */
   function isValidPhone(val) {
     const trimmed = val.trim();
     if (!trimmed) return true;
     return /^\+\d{1,4}[\s\-]?\d[\d\s\-]{5,}$/.test(trimmed);
   }
 
+  /**
+   * Validates that a message contains at least 20 characters.
+   * @param {string} val - Raw input value.
+   * @returns {boolean} `true` if the message meets the minimum length.
+   */
   function isValidMessage(val) {
     return val.trim().length >= 20;
   }

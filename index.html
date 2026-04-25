@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en-US" class="snap-page">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO Meta Tags -->
+  <title>NutriSense: Smart Nutrition, Your Way</title>
+  <meta name="description" content="NutriSense is the smart nutrition platform that adapts meal recommendations to your location, weather, and health profile. Lose weight or gain muscle, on your terms." />
+  <meta name="keywords" content="nutrition app, calorie tracker, smart nutrition, weight loss, muscle gain, meal planner, food tracker, NutriSense, diet app, healthy eating" />
+  <meta name="author" content="NutriSense Team" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="NutriSense: Smart Nutrition, Your Way" />
+  <meta property="og:description" content="Adapt your nutrition to your life: weather, location, and goals all in one platform." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://upc-pre-202610-1asi0730-12053-nutrisens.github.io/nutrisense-website/" />
+  <meta property="og:image" content="https://upc-pre-202610-1asi0730-12053-nutrisens.github.io/nutrisense-website/assets/images/og-image.webp" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="NutriSense: Smart Nutrition, Your Way" />
+  <meta name="twitter:description" content="Adapt your nutrition to your life: weather, location, and goals all in one platform." />
+
+  <link rel="canonical" href="https://upc-pre-202610-1asi0730-12053-nutrisens.github.io/nutrisense-website/" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- Skip to main content (accessibility) -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+     <!-- ============================================================
+       NAVIGATION
+       ============================================================ -->
+  <header role="banner">
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+      <div class="container">
+        <!-- Logo -->
+        <a class="navbar__logo" href="index.html" aria-label="NutriSense Home">
+          <img src="assets/images/logo.webp" alt="NutriSense logo" width="36" height="36" />
+          <span>NutriSense</span>
+        </a>
+
+        <!-- Desktop links -->
+        <ul class="navbar__links" role="list">
+          <li><a href="about-us.html" data-i18n="nav_about">About Us</a></li>
+          <li><a href="features.html" data-i18n="nav_features">Features</a></li>
+          <li><a href="contact.html" data-i18n="nav_contact">Contact</a></li>
+          <li><a href="#footer-social" data-i18n="nav_links">Links</a></li>
+        </ul>
+
+        <!-- Desktop controls -->
+        <div class="navbar__controls">
+          <div class="navbar__lang" aria-label="Language selector">
+            <span class="material-icons" aria-hidden="true" style="font-size:16px">language</span>
+            <select class="lang-select" aria-label="Select language" title="Select language">
+              <option value="en">English</option>
+              <option value="es">Español</option>
+            </select>
+          </div>
+          <a href="#" class="navbar__login" data-i18n="nav_login" aria-label="Log in to NutriSense">Log In</a>
+        </div>
+
+        <!-- Hamburger (mobile) -->
+        <button class="navbar__hamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileMenu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Overlay backdrop -->
+    <div class="navbar__overlay" id="navOverlay" aria-hidden="true"></div>
+
+    <!-- Mobile drawer (right side) -->
+    <div class="navbar__mobile" id="mobileMenu" role="dialog" aria-label="Mobile navigation menu">
+      <div class="navbar__mobile-header">
+        <span class="navbar__mobile-brand">
+          <img src="assets/images/logo.webp" alt="NutriSense" width="28" height="28" />
+          <span>NutriSense</span>
+        </span>
+        <button class="navbar__mobile-close" aria-label="Close navigation menu">
+          <span class="material-icons">close</span>
+        </button>
+      </div>
+      <a href="about-us.html" data-i18n="nav_about">About Us</a>
+      <a href="features.html" data-i18n="nav_features">Features</a>
+      <a href="contact.html" data-i18n="nav_contact">Contact</a>
+      <a href="#footer-social" data-i18n="nav_links">Links</a>
+      <a href="#" class="navbar__login" data-i18n="nav_login">Log In</a>
+      <div class="navbar__lang" aria-label="Language selector">
+        <span class="material-icons" aria-hidden="true" style="font-size:16px">language</span>
+        <select class="lang-select" aria-label="Select language" title="Select language">
+          <option value="en">English</option>
+          <option value="es">Español</option>
+        </select>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============================================================
+       MAIN CONTENT
+       ============================================================ -->
+  <main id="main-content" class="page-content">
+
+    <!-- ============================================================
+         HERO CAROUSEL
+         ============================================================ -->
+    <section class="hero" aria-label="Hero carousel" aria-roledescription="carousel">
+
+      <div class="hero__track" role="list">
+
+        <!-- Slide 1 — Lose Weight CTA -->
+        <article class="hero__slide hero__slide--cta" role="listitem" aria-label="Slide 1 of 4: Weight Loss" aria-hidden="false">
+          <div class="hero__slide-bg" style="background-image: url('assets/images/hero-lose-weight.webp');"></div>
+          <div class="hero__slide-content">
+            <span class="hero__tag" data-i18n="hero1_tag">Weight Loss</span>
+            <h1 data-i18n="hero1_title">Smart Nutrition, Your Way</h1>
+            <p data-i18n="hero1_subtitle">The only platform that adapts your goals and recommendations to your location, your city's weather, and your lifestyle in real time.</p>
+            <a href="#"
+               class="btn btn-primary"
+               data-i18n="hero1_cta"
+               aria-label="Start losing weight">Start Losing Weight</a>
+          </div>
+        </article>
+
+        <!-- Slide 2 — Gain Muscle CTA -->
+        <article class="hero__slide hero__slide--cta" role="listitem" aria-label="Slide 2 of 4: Muscle Gain" aria-hidden="true">
+          <div class="hero__slide-bg" style="background-image: url('assets/images/hero-muscle.webp');"></div>
+          <div class="hero__slide-content">
+            <span class="hero__tag" data-i18n="hero2_tag">Muscle Gain</span>
+            <h1 data-i18n="hero2_title">Build Your Best Body</h1>
+            <p data-i18n="hero2_subtitle">Track your macros intelligently. Get contextual meal suggestions tailored to your muscle-gain goals — wherever you are, whatever the weather.</p>
+            <a href="#"
+               class="btn btn-primary"
+               data-i18n="hero2_cta"
+               aria-label="Start building muscle">Start Building Muscle</a>
+          </div>
+        </article>
+
+        <!-- Slide 3 — About the Product Video -->
+        <article class="hero__slide hero__slide--video" role="listitem" aria-label="Slide 3 of 4: About the Product video" aria-hidden="true">
+          <h2 data-i18n="hero3_title">About the Product</h2>
+          <p data-i18n="hero3_sub">Watch how NutriSense transforms your nutrition journey</p>
+          <div class="hero__video-wrapper">
+            <iframe
+              src="https://www.youtube.com/embed/VIDEO_ID_PRODUCT"
+              title="NutriSense: About the Product"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              loading="lazy"
+              aria-label="NutriSense product promotional video"></iframe>
+          </div>
+        </article>
+
+        <!-- Slide 4 — About the Team Video -->
+        <article class="hero__slide hero__slide--video" role="listitem" aria-label="Slide 4 of 4: About the Team video" aria-hidden="true">
+          <h2 data-i18n="hero4_title">Meet Our Team</h2>
+          <p data-i18n="hero4_sub">The people behind the platform that puts your health first</p>
+          <div class="hero__video-wrapper">
+            <iframe
+              src="https://www.youtube.com/embed/VIDEO_ID_TEAM"
+              title="NutriSense: About the Team"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              loading="lazy"
+              aria-label="NutriSense team introduction video"></iframe>
+          </div>
+        </article>
+
+      </div><!-- /.hero__track -->
+
+      <!-- Prev / Next buttons -->
+      <button class="hero__btn hero__btn--prev" aria-label="Previous slide">
+        <span class="material-icons" aria-hidden="true">chevron_left</span>
+      </button>
+      <button class="hero__btn hero__btn--next" aria-label="Next slide">
+        <span class="material-icons" aria-hidden="true">chevron_right</span>
+      </button>
+
+      <!-- Dot indicators -->
+      <div class="hero__dots" role="tablist" aria-label="Carousel slide indicators">
+        <button class="hero__dot is-active" role="tab" aria-label="Go to slide 1" aria-current="true"></button>
+        <button class="hero__dot" role="tab" aria-label="Go to slide 2"></button>
+        <button class="hero__dot" role="tab" aria-label="Go to slide 3"></button>
+        <button class="hero__dot" role="tab" aria-label="Go to slide 4"></button>
+      </div>
+    </section><!-- /.hero -->
+
+    <!-- ============================================================
+         SMART SCAN SECTION
+         ============================================================ -->
+    <section class="feat-section feat-section--text-left" aria-labelledby="ss-heading">
+      <div class="feat-section__content">
+        <div class="feat-section__text">
+          <h2 id="ss-heading" data-i18n="fh1_title">Smart Scan</h2>
+          <p data-i18n="fh1_desc">Take a photo of your plate or a restaurant menu and get instant nutritional estimates — automatically matched to your profile and goals.</p>
+        </div>
+        <div class="feat-section__img-wrap">
+          <img src="assets/images/feature-smart-scan.webp" alt="Smart Scan: food photo analysis" loading="lazy" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         GLOBAL NUTRITION SECTION
+         ============================================================ -->
+    <section class="feat-section feat-section--img-left" aria-labelledby="gn-heading">
+      <div class="feat-section__content">
+        <div class="feat-section__text">
+          <h2 id="gn-heading" data-i18n="fh2_title">Global Nutrition</h2>
+          <p data-i18n="fh2_desc">Discover healthy local dishes wherever you are. Our platform suggests options based on the food culture of your current city or country.</p>
+        </div>
+        <div class="feat-section__img-wrap">
+          <img src="assets/images/feature-global.webp" alt="Global Nutrition: local dish suggestions" loading="lazy" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         YOUR WEATHER YOUR DIET SECTION
+         ============================================================ -->
+    <section class="feat-section" aria-labelledby="weather-heading">
+      <div class="feat-section__content">
+        <div class="feat-section__text">
+          <h2 id="weather-heading" data-i18n="weather_title">Your weather, your diet</h2>
+          <p data-i18n="weather_subtitle">The world's first smart nutrition assistant that considers your climate. Hot days call for light hydrating meals; cold days call for warming, calorie-dense options.</p>
+        </div>
+        <div class="feat-section__img-wrap">
+          <img src="assets/images/weather-food.webp" alt="Meals recommended based on weather" loading="lazy" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SEGMENTS — Call to Action per segment
+         ============================================================ -->
+    <section class="segments" id="segments" aria-labelledby="segments-heading">
+      <div class="container">
+        <h2 id="segments-heading" data-i18n="seg_title">Join us and transform your life</h2>
+        <p class="segments__subtitle" data-i18n="seg_subtitle">Choose the goal that best describes you and get started today.</p>
+
+        <div class="segments__cards">
+
+          <!-- Segment 1: Muscle Gain -->
+          <article class="segment-card" aria-label="Segment: Muscle Gain">
+            <div class="segment-card__icon">
+              <img src="assets/images/gainmuscle_logo.webp" alt="Gain muscle mass" />
+            </div>
+            <h3 data-i18n="seg1_title">I want to gain muscle mass</h3>
+            <p data-i18n="seg1_desc">Optimized macro tracking, protein targets, and context-aware suggestions for athletes and fitness enthusiasts.</p>
+            <a href="#"
+               class="btn btn-primary"
+               data-i18n="seg1_cta"
+               aria-label="Get started with muscle gain plan">Get Started</a>
+          </article>
+
+          <!-- Segment 2: Weight Loss -->
+          <article class="segment-card" aria-label="Segment: Weight Loss">
+            <div class="segment-card__icon">
+              <img src="assets/images/loseweight_logo.webp" alt="Lose weight" />
+            </div>
+            <h3 data-i18n="seg2_title">I want to lose weight</h3>
+            <p data-i18n="seg2_desc">Effortless calorie control, smart meal swaps, and recommendations that fit your real life — no strict diets required.</p>
+            <a href="#"
+               class="btn btn-primary"
+               data-i18n="seg2_cta"
+               aria-label="Get started with weight loss plan">Get Started</a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    
+    <!-- ============================================================
+         PLANS / PRICING
+         ============================================================ -->
+    <section class="plans" id="plans" aria-labelledby="plans-heading">
+      <div class="container">
+        <h2 id="plans-heading" class="section-title" data-i18n="plans_title">Choose your Plan</h2>
+        <p class="plans__subtitle" data-i18n="plans_subtitle">Start with the plan that fits your goals. Upgrade anytime.</p>
+
+        <div class="plans__grid" role="list">
+
+          <!-- Basic Plan -->
+          <article class="plan-card" role="listitem" aria-label="Basic Plan">
+            <div class="plan-card__name" data-i18n="plan_basic">Basic</div>
+            <div class="plan-card__price">$7.99<span data-i18n="plan_month">/ month</span></div>
+            <p class="plan-card__desc" data-i18n="plan_basic_desc">Core tools to start tracking your nutrition today.</p>
+            <ul class="plan-card__features" aria-label="Basic plan features">
+              <li class="plan-feature">
+                <span class="plan-feature__icon plan-feature__icon--yes" aria-hidden="true"><span class="material-icons" style="font-size:14px">check</span></span>
+                <span data-i18n="pf_nutrition_log">Nutrition Log</span>
+              </li>
+              <li class="plan-feature">
+                <span class="plan-feature__icon plan-feature__icon--yes" aria-hidden="true"><span class="material-icons" style="font-size:14px">check</span></span>
+                <span data-i18n="pf_basic_dashboard">Basic Dashboard</span>
+              </li>
+              <li class="plan-feature">
+                <span class="plan-feature__icon plan-feature__icon--yes" aria-hidden="true"><span class="material-icons" style="font-size:14px">check</span></span>
+                <span data-i18n="pf_body_metrics">BMI / BMR / TDEE</span>
+              </li>
+            </ul>
+            <a href="#" class="btn btn-primary" data-i18n="plan_cta" aria-label="Subscribe to Basic plan">Subscribe Now</a>
+          </article>
+
+          <!-- Pro Plan -->
+          <article class="plan-card" role="listitem" aria-label="Pro Plan">
+
+            <div class="plan-card__name" data-i18n="plan_pro">Pro</div>
+            <div class="plan-card__price">$14.99<span data-i18n="plan_month">/ month</span></div>
+            <p class="plan-card__desc" data-i18n="plan_pro_desc">Context-aware features for serious goal-setters.</p>
+            <ul class="plan-card__features" aria-label="Pro plan features">
+              <li class="plan-feature">
+                <span class="plan-feature__icon plan-feature__icon--yes" aria-hidden="true"><span class="material-icons" style="font-size:14px">check</span></span>
+                <span>Everything included in the Basic Plan.</span>
+              </li>
+              <li class="plan-feature">
+                <span class="plan-feature__icon plan-feature__icon--yes" aria-hidden="true"><span class="material-icons" style="font-size:14px">check</span></span>
+                <span data-i18n="pf_smart_scan">Smart Scan</span>
+              </li>
+              <li class="plan-feature">
+                <span class="plan-feature__icon plan-feature__icon--yes" aria-hidden="true"><span class="material-icons" style="font-size:14px">check</span></span>
+                <span data-i18n="pf_travel_mode">Travel Mode</span>
+              </li>
+              <li class="plan-feature">
+                <span class="plan-feature__icon plan-feature__icon--yes" aria-hidden="true"><span class="material-icons" style="font-size:14px">check</span></span>
+                <span data-i18n="pf_weather_recs">Weather Recommendations</span>
+              </li>
+              <li class="plan-feature">
+                <span class="plan-feature__icon plan-feature__icon--yes" aria-hidden="true"><span class="material-icons" style="font-size:14px">check</span></span>
+                <span data-i18n="pf_pantry">Pantry &amp; Recipe Ideas</span>
+              </li>
+            </ul>
+            <a href="#" class="btn btn-primary" data-i18n="plan_cta" aria-label="Subscribe to Pro plan">Subscribe Now</a>
+          </article>
+
+          <!-- Premium Plan (featured) -->
+          <article class="plan-card plan-card--featured plan-card--recommended" role="listitem" aria-label="Premium Plan: Recommended">
+            <div class="plan-card__badge" data-i18n="plan_recommended">Recommended</div>
+            <div class="plan-card__name" data-i18n="plan_premium">Premium</div>
+            <div class="plan-card__price">$19.99<span data-i18n="plan_month">/ month</span></div>
+            <p class="plan-card__desc" data-i18n="plan_premium_desc">Everything you need, unlimited — for the committed.</p>
+            <ul class="plan-card__features" aria-label="Premium plan features">
+              <li class="plan-feature">
+                <span class="plan-feature__icon plan-feature__icon--yes" aria-hidden="true"><span class="material-icons" style="font-size:14px">check</span></span>
+                <span>Everything included in the Pro Plan.</span>
+              </li>
+              <li class="plan-feature">
+                <span class="plan-feature__icon plan-feature__icon--yes" aria-hidden="true"><span class="material-icons" style="font-size:14px">check</span></span>
+                <span data-i18n="pf_wearable">Wearable Sync</span>
+              </li>
+              <li class="plan-feature">
+                <span class="plan-feature__icon plan-feature__icon--yes" aria-hidden="true"><span class="material-icons" style="font-size:14px">check</span></span>
+                <span data-i18n="pf_menu_analysis">Menu Analysis</span>
+              </li>
+              <li class="plan-feature">
+                <span class="plan-feature__icon plan-feature__icon--yes" aria-hidden="true"><span class="material-icons" style="font-size:14px">check</span></span>
+                <span data-i18n="pf_unlimited_hist">Unlimited History</span>
+              </li>
+              <li class="plan-feature">
+                <span class="plan-feature__icon plan-feature__icon--yes" aria-hidden="true"><span class="material-icons" style="font-size:14px">check</span></span>
+                <span data-i18n="pf_pdf_reports">PDF Reports</span>
+              </li>
+            </ul>
+            <a href="#" class="btn btn-primary" data-i18n="plan_cta" aria-label="Subscribe to Premium plan">Subscribe Now</a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         FEATURES GRID (3×3 teal container)
+         ============================================================ -->
+    <section class="features-grid" id="features" aria-labelledby="feat-heading">
+      <div class="container">
+        <h2 id="feat-heading" class="section-title" data-i18n="feat_title">Features to enjoy</h2>
+
+        <div class="features-teal-wrap">
+          <div class="features-teal-grid" role="list">
+
+            <!-- Row 1 -->
+            <article class="feat-card" role="listitem" aria-label="Smart Scan">
+              <span class="material-icons" aria-hidden="true">photo_camera</span>
+              <h3>Smart Scan</h3>
+            </article>
+
+            <article class="feat-card" role="listitem" aria-label="Weather Recommendations">
+              <span class="material-icons" aria-hidden="true">cloud</span>
+              <h3>Weather Recommendations</h3>
+            </article>
+
+            <article class="feat-card" role="listitem" aria-label="Travel Mode">
+              <span class="material-icons" aria-hidden="true">flight</span>
+              <h3>Travel Mode</h3>
+            </article>
+
+            <!-- Row 2 -->
+            <article class="feat-card" role="listitem" aria-label="Recipe Suggestions">
+              <span class="material-icons" aria-hidden="true">lightbulb</span>
+              <h3>Recipe Suggestions</h3>
+            </article>
+
+            <article class="feat-card" role="listitem" aria-label="Wearable Sync (Google Fit)">
+              <span class="material-icons" aria-hidden="true">watch</span>
+              <h3>Wearable Sync (Google Fit)</h3>
+            </article>
+
+            <article class="feat-card" role="listitem" aria-label="Restaurant Menu Analysis">
+              <span class="material-icons" aria-hidden="true">menu_book</span>
+              <h3>Restaurant Menu Analysis</h3>
+            </article>
+
+            <!-- Row 3 -->
+            <article class="feat-card" role="listitem" aria-label="Food Logging">
+              <span class="material-icons" aria-hidden="true">restaurant_menu</span>
+              <h3>Food Logging</h3>
+            </article>
+
+            <article class="feat-card" role="listitem" aria-label="Unlimited History">
+              <span class="material-icons" aria-hidden="true">history</span>
+              <h3>Unlimited History</h3>
+            </article>
+
+            <article class="feat-card" role="listitem" aria-label="Export PDF Report">
+              <span class="material-icons" aria-hidden="true">picture_as_pdf</span>
+              <h3>Export PDF Report</h3>
+            </article>
+
+          </div>
+        </div>
+
+        <div class="features-grid__cta">
+          <a href="features.html" class="btn btn-primary-teal" data-i18n="feat_see_all" aria-label="See the full features list">See All Features</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         FAQ
+         ============================================================ -->
+    <section class="faq" id="faq" aria-labelledby="faq-heading">
+      <div class="container">
+        <div class="faq__gradient-wrap">
+          <h2 id="faq-heading" class="section-title faq__gradient-title" data-i18n="faq_title">Frequently Asked Questions</h2>
+          <div class="faq__list" role="list">
+
+            <div class="faq-item" role="listitem">
+              <button class="faq-item__question" aria-expanded="false">
+                <span data-i18n="faq1_q">What makes NutriSense different from other nutrition apps?</span>
+                <span class="material-icons faq-item__chevron" aria-hidden="true">expand_more</span>
+              </button>
+              <div class="faq-item__answer" role="region">
+                <p data-i18n="faq1_a">NutriSense is the only platform that combines visual food analysis (Smart Scan), real-time weather recommendations, travel mode with local dish suggestions, and pantry-based recipe ideas — all tailored to your individual health profile and dietary restrictions.</p>
+              </div>
+            </div>
+
+            <div class="faq-item" role="listitem">
+              <button class="faq-item__question" aria-expanded="false">
+                <span data-i18n="faq2_q">How does the "Smart Scan" photo analysis work?</span>
+                <span class="material-icons faq-item__chevron" aria-hidden="true">expand_more</span>
+              </button>
+              <div class="faq-item__answer" role="region">
+                <p data-i18n="faq2_a">Simply take a photo of your plate or a restaurant menu. NutriSense uses computer vision to identify the food items and cross-references our nutritional database to estimate calories and macros. You review and confirm the result before it's saved to your log.</p>
+              </div>
+            </div>
+
+            <div class="faq-item" role="listitem">
+              <button class="faq-item__question" aria-expanded="false">
+                <span data-i18n="faq3_q">Does the app help me if I go on a trip or if the weather changes?</span>
+                <span class="material-icons faq-item__chevron" aria-hidden="true">expand_more</span>
+              </button>
+              <div class="faq-item__answer" role="region">
+                <p data-i18n="faq3_a">Yes! Travel Mode detects or lets you enter your current city/country and suggests healthy local dishes compatible with your profile. The weather engine updates meal recommendations daily based on real-time conditions in your location.</p>
+              </div>
+            </div>
+
+            <div class="faq-item" role="listitem">
+              <button class="faq-item__question" aria-expanded="false">
+                <span data-i18n="faq4_q">Can I use NutriSense if I have allergies or medical restrictions?</span>
+                <span class="material-icons faq-item__chevron" aria-hidden="true">expand_more</span>
+              </button>
+              <div class="faq-item__answer" role="region">
+                <p data-i18n="faq4_a">Absolutely. During profile setup you can specify allergies, intolerances, and medical conditions (diabetes, hypertension, celiac disease, etc.). These filters are applied permanently to every recommendation and search result throughout the app.</p>
+              </div>
+            </div>
+
+            <div class="faq-item" role="listitem">
+              <button class="faq-item__question" aria-expanded="false">
+                <span data-i18n="faq5_q">Can I sync my exercise data with the platform?</span>
+                <span class="material-icons faq-item__chevron" aria-hidden="true">expand_more</span>
+              </button>
+              <div class="faq-item__answer" role="region">
+                <p data-i18n="faq5_a">Premium subscribers can connect Google Fit to automatically import daily steps and active calories burned. These calories are factored into your daily balance in real time. Users without a wearable can also log activity manually.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+    
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__main">
+
+        <!-- Brand -->
+        <div class="footer__brand">
+          <a class="footer__logo" href="index.html" aria-label="NutriSense Home">
+            <img src="assets/images/logo.webp" alt="NutriSense logo" width="36" height="36" />
+            <span>NutriSense</span>
+          </a>
+          <p class="footer__tagline" data-i18n="footer_tagline">Smarter nutrition for real life.</p>
+
+          <!-- Language -->
+          <div class="footer__lang">
+            <label for="footer-lang-select" data-i18n="footer_lang">Language</label>
+            <select id="footer-lang-select" class="lang-select" aria-label="Select language">
+              <option value="en">English</option>
+              <option value="es">Español</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Navigation links -->
+        <nav class="footer__nav" aria-label="Footer navigation">
+          <h4 data-i18n="footer_nav_head">Navigate</h4>
+          <ul role="list">
+            <li><a href="about-us.html" data-i18n="nav_about">About Us</a></li>
+            <li><a href="features.html" data-i18n="nav_features">Features</a></li>
+            <li><a href="contact.html" data-i18n="nav_contact">Contact</a></li>
+          </ul>
+        </nav>
+
+        <!-- Social Media -->
+        <div class="footer__nav">
+          <h4 data-i18n="footer_social" id="footer-social">Social Media</h4>
+          <div class="footer__social" role="list" aria-label="Social media links">
+
+            <a href="https://www.youtube.com/@nutrisense" class="social-link" role="listitem"
+               aria-label="NutriSense on YouTube" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1c.5-1.9.5-5.8.5-5.8s0-3.9-.5-5.8zm-13.9 9.4V8.4l6.3 3.6-6.3 3.6z"/></svg>
+            </a>
+
+            <a href="https://www.facebook.com/nutrisense" class="social-link" role="listitem"
+               aria-label="NutriSense on Facebook" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M24 12.07C24 5.41 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.04V9.41c0-3.02 1.8-4.7 4.54-4.7 1.31 0 2.68.24 2.68.24v2.97h-1.5c-1.5 0-1.96.93-1.96 1.89v2.26h3.32l-.53 3.49h-2.8V24C19.62 23.1 24 18.1 24 12.07z"/></svg>
+            </a>
+
+            <a href="https://www.instagram.com/nutrisense" class="social-link" role="listitem"
+               aria-label="NutriSense on Instagram" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2.16c3.2 0 3.58.01 4.84.07 3.25.15 4.77 1.69 4.92 4.92.06 1.27.07 1.64.07 4.83s-.01 3.58-.07 4.84c-.15 3.23-1.66 4.78-4.92 4.92-1.26.06-1.63.07-4.84.07-3.2 0-3.58-.01-4.84-.07-3.26-.14-4.78-1.7-4.92-4.92C2.17 15.58 2.16 15.2 2.16 12c0-3.2.01-3.58.07-4.84C2.38 3.86 3.9 2.3 7.16 2.23 8.42 2.17 8.8 2.16 12 2.16zM12 0C8.74 0 8.33.01 7.05.07 2.7.27.27 2.7.07 7.05.01 8.33 0 8.74 0 12c0 3.26.01 3.67.07 4.95.2 4.36 2.62 6.78 6.98 6.98C8.33 23.99 8.74 24 12 24c3.26 0 3.67-.01 4.95-.07 4.35-.2 6.78-2.62 6.98-6.98.06-1.28.07-1.69.07-4.95 0-3.26-.01-3.67-.07-4.95C23.73 2.71 21.31.27 16.95.07 15.67.01 15.26 0 12 0zm0 5.84a6.16 6.16 0 1 0 0 12.32 6.16 6.16 0 0 0 0-12.32zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.4-11.85a1.44 1.44 0 1 0 0 2.88 1.44 1.44 0 0 0 0-2.88z"/></svg>
+            </a>
+
+            <a href="https://www.linkedin.com/company/nutrisense" class="social-link" role="listitem"
+               aria-label="NutriSense on LinkedIn" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zm1.78 13.02H3.55V9h3.57v11.45zM22.23 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.8 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.72V1.72C24 .77 23.2 0 22.23 0z"/></svg>
+            </a>
+
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom bar -->
+      <div class="footer__bottom">
+        <p class="footer__copy" data-i18n="footer_copy">© 2026 NutriSense. Designed by the NutriSense Team</p>
+        <div class="footer__terms">
+          <a href="terms.html" data-i18n="footer_terms">Terms and Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

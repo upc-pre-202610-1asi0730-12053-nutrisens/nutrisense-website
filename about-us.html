@@ -76,7 +76,120 @@
       </div>
     </div>
   </header>
+  <!-- ============================================================
+       MAIN CONTENT
+       ============================================================ -->
+  <main id="main-content" class="page-content">
 
+    <!-- Part 1: Hero — Full screen, image background, title only -->
+    <section class="about-hero" aria-labelledby="about-heading">
+      <div class="container">
+        <h1 id="about-heading" data-i18n="about_hero_title">We are NutriSense!</h1>
+      </div>
+    </section>
+
+    <!-- Part 2: Description — White background, text left, image right -->
+    <section class="about-description" aria-label="About NutriSense">
+      <div class="container">
+        <div class="about-description__text">
+          <p data-i18n="about_hero_desc">Eating well shouldn't be a challenge in a dynamic world. At NutriSense, we transform dietary management by combining nutritional tracking with smart contextual analysis. We don't just count calories; we understand your environment so you can reach your fitness goals, no matter where you are or what the weather is today.</p>
+        </div>
+        <img src="assets/images/about-illustration.webp"
+             alt="NutriSense brand illustration"
+             class="about-description__img"
+             loading="lazy" />
+      </div>
+    </section>
+
+    <!-- Part 3: Mission & Vision — White background -->
+    <section class="about-mission" aria-labelledby="mission-heading">
+      <div class="container">
+        <h2 id="mission-heading" class="sr-only">Mission and Vision</h2>
+        <div class="mission-grid" role="list">
+
+          <article class="mission-card" role="listitem" aria-label="Mission">
+            <div class="mission-card__icon" aria-hidden="true">
+              <span class="material-icons">track_changes</span>
+            </div>
+            <h3 data-i18n="mission_title">Mission</h3>
+            <p data-i18n="mission_desc">To empower people to eat better through visual food analysis and smart recommendations adapted to their environment and habits.</p>
+          </article>
+
+          <article class="mission-card" role="listitem" aria-label="Vision">
+            <div class="mission-card__icon" aria-hidden="true">
+              <span class="material-icons">visibility</span>
+            </div>
+            <h3 data-i18n="vision_title">Vision</h3>
+            <p data-i18n="vision_desc">To be the leading personalized nutrition platform in Latin America, transforming user health regardless of their location.</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq" id="faq" aria-labelledby="faq-heading-about">
+      <div class="container">
+        <div class="faq__gradient-wrap">
+          <h2 id="faq-heading-about" class="section-title faq__gradient-title" data-i18n="faq_title">Frequently Asked Questions</h2>
+          <div class="faq__list" role="list">
+
+          <div class="faq-item" role="listitem">
+            <button class="faq-item__question" aria-expanded="false">
+              <span data-i18n="faq1_q">What makes NutriSense different from other nutrition apps?</span>
+              <span class="material-icons faq-item__chevron" aria-hidden="true">expand_more</span>
+            </button>
+            <div class="faq-item__answer" role="region">
+              <p data-i18n="faq1_a">NutriSense is the only platform that combines visual food analysis (Smart Scan), real-time weather recommendations, travel mode with local dish suggestions, and pantry-based recipe ideas — all tailored to your individual health profile and dietary restrictions.</p>
+            </div>
+          </div>
+
+          <div class="faq-item" role="listitem">
+            <button class="faq-item__question" aria-expanded="false">
+              <span data-i18n="faq2_q">How does the "Smart Scan" photo analysis work?</span>
+              <span class="material-icons faq-item__chevron" aria-hidden="true">expand_more</span>
+            </button>
+            <div class="faq-item__answer" role="region">
+              <p data-i18n="faq2_a">Simply take a photo of your plate or a restaurant menu. NutriSense uses computer vision to identify the food items and cross-references our nutritional database to estimate calories and macros. You review and confirm the result before it's saved to your log.</p>
+            </div>
+          </div>
+
+          <div class="faq-item" role="listitem">
+            <button class="faq-item__question" aria-expanded="false">
+              <span data-i18n="faq3_q">Does the app help me if I go on a trip or if the weather changes?</span>
+              <span class="material-icons faq-item__chevron" aria-hidden="true">expand_more</span>
+            </button>
+            <div class="faq-item__answer" role="region">
+              <p data-i18n="faq3_a">Yes! Travel Mode detects or lets you enter your current city/country and suggests healthy local dishes compatible with your profile. The weather engine updates meal recommendations daily based on real-time conditions in your location.</p>
+            </div>
+          </div>
+
+          <div class="faq-item" role="listitem">
+            <button class="faq-item__question" aria-expanded="false">
+              <span data-i18n="faq4_q">Can I use NutriSense if I have allergies or medical restrictions?</span>
+              <span class="material-icons faq-item__chevron" aria-hidden="true">expand_more</span>
+            </button>
+            <div class="faq-item__answer" role="region">
+              <p data-i18n="faq4_a">Absolutely. During profile setup you can specify allergies, intolerances, and medical conditions (diabetes, hypertension, celiac disease, etc.). These filters are applied permanently to every recommendation and search result throughout the app.</p>
+            </div>
+          </div>
+
+          <div class="faq-item" role="listitem">
+            <button class="faq-item__question" aria-expanded="false">
+              <span data-i18n="faq5_q">Can I sync my exercise data with the platform?</span>
+              <span class="material-icons faq-item__chevron" aria-hidden="true">expand_more</span>
+            </button>
+            <div class="faq-item__answer" role="region">
+              <p data-i18n="faq5_a">Premium subscribers can connect Google Fit to automatically import daily steps and active calories burned. These calories are factored into your daily balance in real time. Users without a wearable can also log activity manually.</p>
+            </div>
+          </div>
+
+        </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
   <script src="js/main.js"></script>
 </body>
 </html>

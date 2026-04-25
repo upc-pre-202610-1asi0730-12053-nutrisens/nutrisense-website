@@ -1008,6 +1008,145 @@ h4 { font-size: clamp(18px, 2.5vw, var(--h4)); font-weight: 600; }
   background: #FFE9DE;
 }
 
+/* ============================================================
+   CONTACT PAGE
+   ============================================================ */
+.contact-hero {
+  position: relative;
+  padding: 80px 0 60px;
+  background-color: var(--color-primary);
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.contact-hero__bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: .55;
+}
+
+.contact-hero .container {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.contact-hero__title-box {
+  background: #FFC0CB;
+  border-radius: var(--radius-lg);
+  padding: 28px 40px;
+  font-family: var(--font-heading);
+  font-size: var(--h2);
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.contact-hero__phone {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--color-black);
+  font-family: var(--font-heading);
+  font-size: var(--h3);
+  font-weight: 600;
+}
+.contact-hero__phone .material-icons { font-size: 36px; }
+
+.contact-form-section {
+  padding: 80px 0;
+  background: var(--color-white);
+}
+
+.btn-pink {
+  background: #FFC0CB;
+  color: var(--color-text);
+  box-shadow: var(--shadow-sm);
+}
+.btn-pink:hover { background: #ffaab7; box-shadow: var(--shadow-md); }
+
+.contact-form-section .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.contact-form-img {
+  width: 400px;
+  height: 600px;
+  max-width: 100%;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  object-fit: cover;
+  background: var(--color-primary);
+}
+
+.contact-form h2 { margin-bottom: 32px; font-size: var(--h3); }
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  font-family: var(--font-heading);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-text);
+  letter-spacing: .3px;
+}
+
+.form-group input,
+.form-group textarea {
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 12px 16px;
+  font-family: var(--font-body);
+  font-size: 15px;
+  color: var(--color-text);
+  background: var(--color-white);
+  transition: border-color var(--transition), box-shadow var(--transition);
+  outline: none;
+}
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(80,139,137,.15);
+}
+
+.form-group input.is-error,
+.form-group textarea.is-error { border-color: #e53935; }
+
+.form-group textarea { resize: vertical; min-height: 120px; }
+
+.form-group__error {
+  font-size: var(--caption);
+  color: #e53935;
+  display: none;
+}
+.form-group__error.is-visible { display: block; }
+
+.form-success {
+  display: none;
+  background: #e8f5e9;
+  border: 1px solid #66bb6a;
+  color: #2e7d32;
+  border-radius: var(--radius);
+  padding: 16px 20px;
+  font-size: 15px;
+  margin-top: 20px;
+}
+.form-success.is-visible { display: block; }
 /* Tablet — 1024px */
 @media (max-width: 1024px) {
   .plans__grid { grid-template-columns: 1fr; max-width: 440px; margin: 0 auto; }

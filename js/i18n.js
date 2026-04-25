@@ -1,4 +1,4 @@
-**
+/**
  * @fileoverview NutriSense Internationalization (i18n) module.
  * Supports en_US (default) and es_419 (Latin-American Spanish).
  * The selected language is persisted in localStorage and applied to every

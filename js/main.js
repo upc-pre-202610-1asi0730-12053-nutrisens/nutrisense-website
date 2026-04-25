@@ -173,6 +173,31 @@ function initCarousel() {
 
 /**
  * Initialises the FAQ accordion.
+ * Clicking a question expands its answer and collapses any previously open item.
+ * @returns {void}
+ */
+function initFAQ() {
+  const faqItems = document.querySelectorAll('.faq-item');
+  faqItems.forEach(item => {
+    const btn    = item.querySelector('.faq-item__question');
+    const answer = item.querySelector('.faq-item__answer');
+    if (!btn || !answer) return;
+    btn.addEventListener('click', () => {
+      const isOpen = item.classList.contains('is-open');
+      faqItems.forEach(i => {
+        i.classList.remove('is-open');
+        i.querySelector('.faq-item__question')?.setAttribute('aria-expanded', 'false');
+      });
+      if (!isOpen) {
+        item.classList.add('is-open');
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+}
+
+/**
+ * Initialises the FAQ accordion.
  * Only one answer panel can be open at a time; clicking an open item closes it.
  * @returns {void}
  */

@@ -21,6 +21,7 @@ const translations = {
     /* --- NAV --- */
     nav_about:    'About Us',
     nav_features: 'Features',
+    nav_pricing:  'Pricing',
     nav_contact:  'Contact',
     nav_links:    'Links',
     nav_login:    'Log In',
@@ -195,6 +196,7 @@ const translations = {
     /* --- NAV --- */
     nav_about:    'Nosotros',
     nav_features: 'Funcionalidades',
+    nav_pricing:  'Precios',
     nav_contact:  'Contacto',
     nav_links:    'Enlances',
     nav_login:    'Iniciar sesión',

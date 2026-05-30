@@ -198,7 +198,7 @@ const translations = {
     nav_features: 'Funcionalidades',
     nav_pricing:  'Precios',
     nav_contact:  'Contacto',
-    nav_links:    'Enlances',
+    nav_links:    'Enlaces',
     nav_login:    'Iniciar sesión',
     nav_lang_label: 'Idioma',
 

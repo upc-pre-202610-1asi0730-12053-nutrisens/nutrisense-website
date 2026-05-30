@@ -232,6 +232,11 @@ h4 { font-size: clamp(18px, 2.5vw, var(--h4)); font-weight: 600; }
   cursor: pointer;
 }
 
+.navbar__lang select option {
+  background: var(--color-primary-dk);
+  color: var(--color-white);
+}
+
 .navbar__controls {
   display: flex;
   align-items: center;

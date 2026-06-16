@@ -83,30 +83,28 @@ function initCarousel() {
   const hero = document.querySelector('.hero');
   if (!hero) return;
 
-  const track     = hero.querySelector('.hero__track');
-  const slides    = hero.querySelectorAll('.hero__slide');
-  const dots      = hero.querySelectorAll('.hero__dot');
-  const btnPrev   = hero.querySelector('.hero__btn--prev');
-  const btnNext   = hero.querySelector('.hero__btn--next');
+  const track   = hero.querySelector('.hero__track');
+  const slides  = hero.querySelectorAll('.hero__slide');
+  const dots    = hero.querySelectorAll('.hero__dot');
+  const btnPrev = hero.querySelector('.hero__btn--prev');
+  const btnNext = hero.querySelector('.hero__btn--next');
 
   if (!track || slides.length === 0) return;
 
-  /** @type {number} Index of the currently visible slide. */
-  let current  = 0;
+  let current      = 0;
+  let autoTimer    = null;
+  let videoPlaying = false;
+  const INTERVAL   = 6000;
+  const ytPlayers  = [];
 
-  /** @type {number|null} Handle for the auto-play interval timer. */
-  let autoTimer = null;
+  function pauseAllVideos() {
+    ytPlayers.forEach(p => { try { p.pauseVideo(); } catch (_) {} });
+    videoPlaying = false;
+  }
 
-  /** @type {number} Milliseconds between automatic slide transitions. */
-  const INTERVAL = 6000;
-
-  /**
-   * Transitions the carousel to the given slide index.
-   * Wraps around both ends and updates ARIA attributes and dot indicators.
-   * @param {number} index - Target slide index (may be out of bounds; will wrap).
-   * @returns {void}
-   */
   function goTo(index) {
+    pauseAllVideos();
+
     slides[current].setAttribute('aria-hidden', 'true');
     dots[current]?.classList.remove('is-active');
 
@@ -119,23 +117,50 @@ function initCarousel() {
     dots.forEach((d, i) => { if (i !== current) d.removeAttribute('aria-current'); });
   }
 
-  /**
-   * Starts (or restarts) the auto-play interval timer.
-   * Clears any existing timer before creating a new one.
-   * @returns {void}
-   */
   function startAuto() {
     clearInterval(autoTimer);
-    autoTimer = setInterval(() => goTo(current + 1), INTERVAL);
+    if (!videoPlaying) {
+      autoTimer = setInterval(() => goTo(current + 1), INTERVAL);
+    }
   }
 
-  /**
-   * Resets the auto-play timer after a manual interaction.
-   * @returns {void}
-   */
   function resetAuto() {
     startAuto();
   }
+
+  function onPlayerStateChange({ data }) {
+    if (data === 1) {               // YT.PlayerState.PLAYING
+      videoPlaying = true;
+      clearInterval(autoTimer);
+    } else if (data === 0 || data === 2) {  // ENDED or PAUSED
+      videoPlaying = false;
+      startAuto();
+    }
+  }
+
+  function initYTPlayers() {
+    ['yt-product', 'yt-team'].forEach(id => {
+      const el = document.getElementById(id);
+      if (!el) return;
+      ytPlayers.push(new YT.Player(id, { events: { onStateChange: onPlayerStateChange } }));
+    });
+  }
+
+  // Chain with any pre-existing onYouTubeIframeAPIReady
+  const prevReady = window.onYouTubeIframeAPIReady;
+  window.onYouTubeIframeAPIReady = function () {
+    prevReady?.();
+    initYTPlayers();
+  };
+
+  // In case the API script already executed before DOMContentLoaded
+  if (typeof YT !== 'undefined' && YT.Player) initYTPlayers();
+
+  // Pause videos when the hero section scrolls out of view
+  new IntersectionObserver(
+    entries => { if (!entries[0].isIntersecting) pauseAllVideos(); },
+    { threshold: 0.1 }
+  ).observe(hero);
 
   goTo(0);
   startAuto();
@@ -147,7 +172,6 @@ function initCarousel() {
     dot.addEventListener('click', () => { goTo(i); resetAuto(); });
   });
 
-  /** @type {number} X coordinate where a touch gesture started. */
   let touchStartX = 0;
   track.addEventListener('touchstart', e => { touchStartX = e.changedTouches[0].clientX; }, { passive: true });
   track.addEventListener('touchend', e => {
@@ -159,7 +183,7 @@ function initCarousel() {
   }, { passive: true });
 
   hero.addEventListener('mouseenter', () => clearInterval(autoTimer));
-  hero.addEventListener('mouseleave', startAuto);
+  hero.addEventListener('mouseleave', () => { if (!videoPlaying) startAuto(); });
 
   hero.addEventListener('keydown', e => {
     if (e.key === 'ArrowLeft')  { goTo(current - 1); resetAuto(); }
